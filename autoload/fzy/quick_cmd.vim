@@ -28,12 +28,14 @@ function! s:get_command()
   exe 'redir > ' . tmp
   silent command
   redir END
-  let cmd = 'cat ' . tmp . " | tr -d 'b' | tr -d '!' | awk -F ' ' 'NR > 1 {print \":\"$1}'"
+  let cmd = 'cat ' . tmp . " | cut -c 4- | awk -F ' ' 'NR > 2 {print \":\"$1}'"
   return cmd
 endfunction
 
 function! s:execute(command)
-  execute a:command
+  redir => yank | echo a:command | redir END
+  let @x = substitute(yank, "\n", '', 'g')
+  call feedkeys(':' . yank . ' ', 'n')
 endfunction
 
 function! fzy#quick_cmd#list()
