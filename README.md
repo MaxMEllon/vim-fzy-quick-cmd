@@ -3,9 +3,11 @@
 ![Support Vim 8.0.0039 or above](https://img.shields.io/badge/support-Vim%208.0.0039%20or%20above-yellowgreen.svg?style=flat-square)
 [![MIT License](https://img.shields.io/badge/license-MIT-blue.svg?style=flat-square)](LICENSE)
 
-![](https://raw.githubusercontent.com/MaxMEllon/demos/master/vim-fzy-quick-cmd/demo.gif)
+(A demo to call [vim-fugitive](https://github.com/tpope/vim-fugitive) by vim-fzy-qucik-cmd.)
+![Demo with fugitive](https://raw.githubusercontent.com/MaxMEllon/demos/master/vim-fzy-quick-cmd/demo.gif)
 
-**A plugin to find file on rails project by fzy within vim.**
+
+**A plugin to find user command by fzy within vim.**
 
 Requirements
 ---
